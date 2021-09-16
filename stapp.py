@@ -55,7 +55,7 @@ def main():
     else:
         st.image(data)
 
-    if st.button('Prediksi'):
+    if st.button('Prediksi Kandungan Makanan'):
         hasil = getPrediction(data,model)
         # dfhasil = pd.DataFrame.from_dict(hasil)
         # keys = list(hasil.keys())
