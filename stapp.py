@@ -86,7 +86,7 @@ def main():
         b = dfk['Lemak'].sum()
         c = dfk['Karbohidrat'].sum()
         d = dfk['Protein'].sum()
-        st.write(f'Kkal: {np.round(a)}',f'Lemak: {np.round(b)}',f'Karbohidrat: {np.round(c)}',f'Protein: {np.round(d)}')
+        st.write(f'Kalori: {np.round(a)}Kkal',f'Lemak: {np.round(b)}gr',f'Karbohidrat: {np.round(c)}gr',f'Protein: {np.round(d)}gr')
 
         
 
