@@ -82,7 +82,7 @@ def main():
         else:
             risiko = 'Aman'
         top1 = top['nama'].tolist()
-        st.write(top1[0])
+        st.subheader(top1[0])
         st.write(f'Risiko bagi penderita Diabetes/Jantung: {risiko}')
         # st.write(dfk)
         a = dfk['Kkal'].sum()
