@@ -53,7 +53,10 @@ def main():
     if data == None:
         st.write('Silakan Upload Foto')
     else:
-        st.image(data)
+        img = Image.open(data)
+        newsize = (224, 224)
+        image = img.resize(newsize)
+        st.image(image)
 
     if st.button('Prediksi Kandungan Makanan'):
         hasil = getPrediction(data,model)
