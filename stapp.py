@@ -21,6 +21,14 @@ sys.modules['Image'] = Image
 base="light"
 primaryColor="purple"
 
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+
 model = keras.models.load_model('fcvmodel.h5')
 dbfood = pd.read_csv('dbfood.csv',sep=";")
 food = dbfood['nama'].tolist()
@@ -49,7 +57,7 @@ st.set_page_config(layout='wide')
 
 def main():
     st.subheader("Heal - Food Analyzer")
-    data = st.file_uploader('Upload Foto')
+    data = st.file_uploader('')
     if data == None:
         st.write('Silakan Upload Foto')
     else:
