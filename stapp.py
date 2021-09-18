@@ -21,13 +21,19 @@ sys.modules['Image'] = Image
 base="light"
 primaryColor="purple"
 
-hide_streamlit_style = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            </style>
-            """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+footer='''
+
+<style> your css code put here</style>
+
+<div class='footer'>
+
+<p>the word you want to tell<a style='display:block;text-align:center;' 
+
+href='https://www.streamlit.io' target='_blank'>your email address put here</a></p>
+
+</div>'''
+
+st.markdown(footer, unsafe_allow_html=True)
 
 model = keras.models.load_model('fcvmodel.h5')
 dbfood = pd.read_csv('dbfood.csv',sep=";")
