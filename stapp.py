@@ -58,7 +58,7 @@ def main():
         image = img.resize(newsize)
         st.image(image)
 
-    if st.button('Jalankan Prediksi'):
+#     if st.button('Jalankan Prediksi'):
         hasil = getPrediction(data,model)
         # dfhasil = pd.DataFrame.from_dict(hasil)
         # keys = list(hasil.keys())
