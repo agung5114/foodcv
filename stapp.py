@@ -53,7 +53,7 @@ def getPrediction(data,model):
     # top3 = dict(sorted(top.items(), key=operator.itemgetter(1), reverse=True)[:3])
     return top3
 
-st.set_page_config(layout='wide')
+# st.set_page_config(layout='wide')
 
 def main():
     st.subheader("Heal - Food Analyzer")
