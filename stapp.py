@@ -48,7 +48,7 @@ def getPrediction(data,model):
 st.set_page_config(layout='wide')
 
 def main():
-    st.subheader("Food Calorie Estimator")
+    st.subheader("HEAL- Prediksi Kandungan Makanan")
     data = st.file_uploader('Upload Foto')
     if data == None:
         st.write('Silakan Upload Foto')
@@ -58,7 +58,7 @@ def main():
         image = img.resize(newsize)
         st.image(image)
 
-    if st.button('Prediksi Kandungan Makanan'):
+    if st.button('Jalankan Prediksi'):
         hasil = getPrediction(data,model)
         # dfhasil = pd.DataFrame.from_dict(hasil)
         # keys = list(hasil.keys())
