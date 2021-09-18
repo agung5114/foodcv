@@ -91,8 +91,8 @@ def main():
             risiko = 'Aman'
         top1 = top['nama'].tolist()
         st.subheader(top1[0])
-        out = '''<h3>f'{str(top1[0]}'<h3>'''
-        st.markdown(out, unsafe_allow_html=True)
+#         out = '''<h3>f'{str(top1[0]}'<h3>'''
+        st.markdown(f'{str(top1[0]}', unsafe_allow_html=True)
         st.write(f'Risiko bagi penderita Diabetes/Jantung: {risiko}')
         # st.write(dfk)
         a = dfk['Kkal'].sum()
