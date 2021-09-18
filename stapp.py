@@ -48,7 +48,7 @@ def getPrediction(data,model):
 st.set_page_config(layout='wide')
 
 def main():
-    st.subheader("HEAL- Prediksi Kandungan Makanan")
+    st.subheader("Heal - Food Analyzer")
     data = st.file_uploader('Upload Foto')
     if data == None:
         st.write('Silakan Upload Foto')
