@@ -62,7 +62,7 @@ def main():
         st.write('Silakan Upload Foto')
     else:
         img = Image.open(data)
-        newsize = (240, 240)
+        newsize = (280, 280)
         image = img.resize(newsize)
         st.image(image)
 
