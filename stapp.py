@@ -59,7 +59,7 @@ def main():
     st.subheader("Heal - Food Analyzer")
     data = st.file_uploader('')
     if data == None:
-        st.write('Silakan Upload Foto')
+        st.write('Please Upload Photo of Food')
     else:
         img = Image.open(data)
         newsize = (280, 230)
