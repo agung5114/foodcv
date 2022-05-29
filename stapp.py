@@ -82,27 +82,27 @@ def main():
         total= tingkat[0]+tingkat[1]+tingkat[2]
         risiko = None
         if total >450:
-            risiko = 'Bahaya'
+            risiko = 'High Risk to Consume'
         elif total >250:
-            risiko = 'Tinggi'
+            risiko = 'Medium Risk to Consume'
         elif total >105:
-            risiko = 'Sedang'
+            risiko = 'Low Risk to Consume'
         else:
-            risiko = 'Aman'
+            risiko = 'Safe to Consume'
         top1 = top['nama'].tolist()
         st.subheader(top1[0])
 #         st.write(f"Confidence: {top['prop'].tolist()[0]}")
 #         out = '''<h3>f'{str(top1[0]}'<h3>'''
 #         st.markdown(f'{str(top1[0])}', unsafe_allow_html=True)
-        st.write(f'Risiko bagi penderita Diabetes/Jantung: {risiko}')
+        st.write(f'Risk for who have Diabetes/Heart Disease: {risiko}')
         # st.write(dfk)
         a = dfk['Kkal'].sum()
         b = dfk['Lemak'].sum()
         c = dfk['Karbohidrat'].sum()
         d = dfk['Protein'].sum()
-        st.write(f'Kalori: {np.round(a)} Kkal')
-        st.write(f'Lemak: {np.round(b)} gr')
-        st.write(f'Karbohidrat: {np.round(c)} gr')
+        st.write(f'Calorie: {np.round(a)} Kkal')
+        st.write(f'Fat: {np.round(b)} gr')
+        st.write(f'Carbohydrate: {np.round(c)} gr')
         st.write(f'Protein: {np.round(d)} gr')
 
         
